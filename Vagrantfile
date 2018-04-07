@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.provider :virtualbox do |vb|
-    vb.customize [ 'modifyvm', :id, '--memory', 800 ]
+    vb.customize ['modifyvm', :id, '--memory', 800]
   end
   config.vm.network "forwarded_port", guest: 3000, host: 4000
 
